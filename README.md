@@ -6,7 +6,7 @@ link to our paper:
 
 **Dataset**
 
-The Maldeb Dataset is an Image representation of Malware-benign dataset. The Dataset were compiled from various sources malware repositories: The Malware-Repo, TheZoo,Malware Bazar, Malware Database, TekDefense. Meanwhile benign samples were sourced from system application of Microsoft 10 and 11, as well as open source software repository such as Sourceforge, PortableFreeware, CNET, FileForum. https://ieee-dataport.org/documents/maldeb-dataset
+The Maldeb Dataset is an Image representation of Malware-benign dataset. The Dataset were compiled from various sources malware repositories: The Malware-Repo, TheZoo,Malware Bazar, Malware Database, TekDefense. Meanwhile benign samples were sourced from system application of Microsoft 10 and 11, as well as open source software repository such as Sourceforge, PortableFreeware, CNET, FileForum. The Maldeb dataset can be accessed at https://ieee-dataport.org/documents/maldeb-dataset
 
 The samples were validated by scanning them using Virustotal Malware scanning services. The Samples were pre-processed by transforming the malware binary into grayscale images following rules from Nataraj (2011).
 
