@@ -23,6 +23,7 @@ lightly https://docs.lightly.ai/self-supervised-learning/index.html
 
 File multimedia.py for testing the model
 File audio.py for training the model
+The SSL classifier can be accessed at https://github.com/julismail/Self-Supervised
 
 **Contributors**
 
