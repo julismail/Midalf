@@ -1,3 +1,4 @@
+#code for testing midalf model with testing dataset
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -17,7 +18,7 @@ class ImageClassifier(pl.LightningModule):
     def __init__(self, num_classes=2):
         super(ImageClassifier, self).__init__()
         self.model = models.resnet18(weights=None)
-        self.model.load_state_dict(torch.load('/home/plaiground/Documents/resnet-18/resnet18-f37072fd.pth'))
+        self.model.load_state_dict(torch.load('path to you resnet model'))
         in_features = self.model.fc.in_features
         self.model.fc = nn.Identity()  # Use identity to output features instead of classification
         self.in_features = in_features  # Save the in_features attribute
@@ -31,7 +32,7 @@ class SpectrogramClassifier(nn.Module):
     def __init__(self, num_classes=2):
         super(SpectrogramClassifier, self).__init__()
         self.model = models.resnet18(weights=None)
-        self.model.load_state_dict(torch.load('/home/plaiground/Documents/resnet-18/resnet18-f37072fd.pth'))
+        self.model.load_state_dict(torch.load('path to your resnet model'))
         in_features = self.model.fc.in_features
         self.model.fc = nn.Identity()  # Use identity to output features instead of classification
         self.in_features = in_features  # Save the in_features attribute
@@ -123,14 +124,14 @@ data_transforms = {
     ])
 }
 
-image_dataset = ImageFolder(root='/home/plaiground/Documents/dataset/bodimgsplit/test/', transform=data_transforms['images'])
-spectrogram_dataset = ImageFolder(root='/home/plaiground/Documents/dataset/bodimgspectrosplit/test/', transform=data_transforms['spectrograms'])
+image_dataset = ImageFolder(root='path to your image representation dataset', transform=data_transforms['images'])
+spectrogram_dataset = ImageFolder(root='path to your spectrogram representation dataset', transform=data_transforms['spectrograms'])
 
 paired_dataset = PairedDataset(image_dataset, spectrogram_dataset)
 test_loader = DataLoader(paired_dataset, batch_size=32, shuffle=False)
 
-image_model_path = "/home/plaiground/Documents/multimodal/imgcnnbod.pth"
-spectrogram_model_path = "/home/plaiground/Documents/multimodal/spectroCNNbodmas.pth"
+image_model_path = "path to your trained image classifier model"
+spectrogram_model_path = "path to your trained spectrogram classifier model"
 
 fusion_model = MultimodalLateFusion(image_model_path, spectrogram_model_path)
 
