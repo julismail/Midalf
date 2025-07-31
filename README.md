@@ -28,12 +28,12 @@ Folder GAN consist of GAN generated adversarial malware sample
 
 **Contributors**
 
-Hendrawan
-Budi Rahardjo
-Tutun Juhana
-Yasuo Musashi
-Dani Agung Prastiyo
-Dita Rananta
+Hendrawan,
+Budi Rahardjo,
+Tutun Juhana,
+Yasuo Musashi,
+Dani Agung Prastiyo,
+Dita Rananta.
 
 **Contact**
 
