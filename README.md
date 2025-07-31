@@ -1,6 +1,6 @@
 # MIDALF - Multimodal malware image and audio late fusion for malware detection
 
-This is the repository of our paper *"MIDALF - Multimodal Malware Image and Audio Late Fusion for Malware Detection"*. We developed a malware detection system with multimodal. Midalf transforms malware binaries into image and audio representations. The image representations were trained with MalSSL, and the audio representations were trained with CNN. The output of both model were combined with late fusion. We tested the system on the Bodmas dataset and Maldeb dataset.
+This is the repository of our paper *"MIDALF - Multimodal Malware Image and Audio Late Fusion for Malware Detection"* published in Eurasip Journal of Information Security by Springer. We developed a malware detection system with multimodal. Midalf transforms malware binaries into image and audio representations. The image representations were trained with MalSSL, and the audio representations were trained with CNN. The output of both model were combined with late fusion. We tested the system on the Bodmas dataset and Maldeb dataset.
 
 link to our paper:
 https://rdcu.be/eyDYu
